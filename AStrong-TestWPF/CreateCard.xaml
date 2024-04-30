@@ -1,0 +1,19 @@
+﻿<Window x:Class="AStrong_TestWPF.CreateCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AStrong_TestWPF"
+        mc:Ignorable="d"
+        Title="CreateCard" Height="450" Width="800">
+    <Grid>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="82,79,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Path=CardModel.Description}"  HorizontalAlignment="Left" Margin="235,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526" Height="125"/>
+        <Button Command="{Binding ClickOpenFileDialog}" Content="Chose file" HorizontalAlignment="Left" Height="36" Margin="66,232,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Name="filePath" Content="{Binding Path=CardModel.Image}" HorizontalAlignment="Left" Margin="235,237,0,0" VerticalAlignment="Top" Width="526"/>
+        <Button Command="{Binding ClickSave}" Content="Save" HorizontalAlignment="Left" Margin="235,315,0,0" VerticalAlignment="Top" Height="27" Width="263"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="117,250,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Go back" HorizontalAlignment="Left" Margin="711,10,0,0" VerticalAlignment="Top" Height="24" Width="61" Click="Button_Click"/>
+
+    </Grid>
+</Window>
